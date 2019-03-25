@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+
+body{
+    margin: 0;
+    font-family: Quicksand, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#loading{
+    position: absolute;
+    width: 3rem;
+}
+
+#noDate{
+    top:35%;
+    position: absolute;
+    width: 50%;
+    text-align: center;
+    color: #b49c9c;
+    line-height: 2rem;
+}
+
+#homePage{
+    height: 100%;
+    width: 100%;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+}
+
+header{
+    width: 100%;
+    height: 3rem;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f18c8e;
+    font-size: 1.2rem;
+    color: #fff;
+    box-shadow: 1px 1px 1px #d4ccc9;
+}
+
+header img {
+    width: 1.6rem;
+    margin-right: 0.5rem;
+    position: relative;
+    top: 0.1rem;
+}
+
+main{
+    width: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 3rem;
+    bottom: 4rem;
+    z-index: -1;
+}
+
+main::-webkit-scrollbar {
+    display: none;
+}
+
+/*      overlay     */
+
+.overlay{
+    position:absolute;
+    background-color: rgba(67, 67, 67, 0.6);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.overlay #dismissed {
+     font-size: 2rem;
+     width: 50%;
+     text-align: left;
+     color: #ffffff;
+     margin-left: 2rem;
+     padding-left: 1rem;
+     border-left: 3px solid #f18c8e;
+}
+
+.overlay #fvourited {
+    font-size: 2rem;
+    width: 50%;
+    text-align: right;
+    color: #ffffff;
+    margin-right: 2rem;
+    padding-right: 1rem;
+    border-right: 3px solid #f18c8e;
+}
+
+#fvourite{
+    justify-content: flex-end;
+}
+
+/*    Function    */
+
+.notActive{
+    opacity: 0.7;
+    color: #f2b8a4;
+}
+
+.hide{
+    display: none !important;
+}
+
+.save{
+    transform: translateX(200vw);
+    transition: all 0.3s linear;
+}
+
+.delete{
+    transform: translateX(-200vw);
+    transition: all 0.3s linear;
+}
+
+.deleteP{
+    transform: translateX(105vw);
+    transition: all 0.5s ease-in;
+}
+
+.small{
+    transform: scale(0.001);
+}
+
+.saveHeart{
+    animation: rotate 0.7s ease-out;
+}
+
+@keyframes rotate {
+    30% {
+        color: #f18c8e;
+        transform: scale(1.2);
+        transform-origin: 50% 50%;
+    }
+}
+
+/*   nav   bar    */
+
+nav{
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fafafa;
+    color: #f18c8e;
+    border-top: 0.5px solid rgba(225, 225, 225, 0.933);
+}
+
+nav i {
+    font-size: 1.2rem;
+    margin-right: 0.25rem;
+}
+
+nav p{
+    margin: 0;
+    font-size: 0.9rem;
+    margin-left: 0.25rem;
+}
+
+#home, #saved{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+#home div, #saved div{
+    position: relative;
+    top: 0.1rem;
+    margin: auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*        Home Page          */
+
+.card p{
+    margin: 0;
+    margin: 1rem 0.3rem;
+}
+
+.card{
+    margin: auto;
+    width: 95%;
+    height: 97%;
+    background-color: white;
+    box-shadow: 1px 1px 1px #d4ccc9;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    overflow: hidden;
+    transition: all 0.2s linear;
+}
+
+.photoCnt{
+    height: 90%;
+    overflow: hidden;
+    background-color: #fedbd0;
+}
+
+.photos{
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+.gender,.distance{
+    opacity: 0.6;
+    font-weight: 100;
+}
+
+.profile{
+    margin: 0 1rem;
+    color: rgb(120, 120, 120);
+}
+
+.card p.name{
+    font-size: 1.3rem;
+    color: #f18c8e;
+}
+
+/*      Saved Page      */
+
+#listPage{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+#listPage>div:nth-child(1){
+    margin-top: 0.5rem;
+}
+
+.savedList{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    padding: 0 1rem;
+}
+.photoCntSave{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0.5rem 0;
+}
+.photosSave{
+    width: 100%;
+}
+
+.profileSave{
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profileSave i {
+    color: #b49c9c;
+    opacity: 0.6;
+}
+
+.nameSave{
+    color: #442b2d;
+    font-size: 1rem;
+}

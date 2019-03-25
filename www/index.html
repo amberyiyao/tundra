@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Tundra</title>
+</head>
+
+<body>
+    <header>
+        <img src="img/love.png">
+        <p>Tundra Dating</p>
+    </header>
+    <main>
+        <img id="loading" src="img/loading.svg">
+        <p id="noDate" class="hide">No dating now, go to home page to save one! </p>
+        <div class="overlay hide" id="dismiss">
+            <p id="dismissed">Profile Dismissed</p>
+        </div>
+        <div class="overlay hide" id="fvourite">
+            <p id="fvourited">Profile Fvourited</p>
+        </div>
+        <div id="homePage">
+        </div>
+        <div id="listPage" class="hide">
+        </div>
+    </main>
+    <nav>
+        <div id="home">
+            <div>
+                <i class="fas fa-home"></i>
+                <p>HOME</p>
+            </div>
+        </div>
+        <div id="saved" class="notActive">
+            <div>
+                <i class="fas fa-heart"></i>
+                <p>FVOURITED</p>
+            </div>
+        </div>
+    </nav>
+    <script src="js/tinyshell-min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
