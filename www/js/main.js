@@ -2,9 +2,6 @@ let app = {
     savedList: [],
     imgBaseURL: null,
     init: function () {
-        if (sessionStorage.getItem('savedList')) {
-            app.savedList = JSON.parse(sessionStorage.getItem('savedList'));
-        }
         app.addListeners();
         app.getProfiles();
     },
@@ -25,6 +22,10 @@ let app = {
         document.getElementById('listPage').classList.remove('hide');
         document.getElementById('saved').classList.remove('notActive');
         document.getElementById('home').classList.add('notActive');
+
+        if (sessionStorage.getItem('savedList')) {
+            app.savedList = JSON.parse(sessionStorage.getItem('savedList'));
+        }
 
         if (app.savedList.length == 0) {
             document.getElementById('noDate').classList.remove('hide');
