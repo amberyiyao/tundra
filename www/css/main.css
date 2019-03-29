@@ -104,6 +104,7 @@ main::-webkit-scrollbar {
 .notActive{
     opacity: 0.7;
     color: #f2b8a4;
+    transition: all 0.1s ease-in;
 }
 
 .hide{
@@ -173,6 +174,7 @@ nav p{
     text-align: center;
     display: flex;
     justify-content: center;
+    transition: all 0.1s ease-in;
 }
 
 #home div, #saved div{
@@ -182,6 +184,7 @@ nav p{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.1s ease-in;    
 }
 
 /*        Home Page          */
