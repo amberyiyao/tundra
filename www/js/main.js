@@ -22,7 +22,7 @@ let app = {
         document.getElementById('listPage').classList.remove('hide');
         document.getElementById('saved').classList.remove('notActive');
         document.getElementById('home').classList.add('notActive');
-
+        
         if (sessionStorage.getItem('savedList')) {
             app.savedList = JSON.parse(sessionStorage.getItem('savedList'));
         }
@@ -108,7 +108,7 @@ let app = {
     },
     profilCard: {},
     creatCard: function () {
-        if (app.profilCard.profiles.length < 3 || app.index >= app.profilCard.profiles.length) {
+        if (app.index >= app.profilCard.profiles.length) {
             app.getProfiles();
             app.index = 0;
             return;
