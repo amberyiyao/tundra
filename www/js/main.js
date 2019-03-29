@@ -83,7 +83,7 @@ let app = {
             } else {
                 document.getElementById('noDate').classList.add('hide');
             }
-        }, 500);
+        }, 300);
 
     },
     index: 0,
@@ -112,8 +112,6 @@ let app = {
             app.index = 0;
             return;
         }
-        console.log(app.index);
-
         let content = document.getElementById('homePage');
         content.innerHTML = "";
 
@@ -124,8 +122,6 @@ let app = {
         let name = document.createElement('p');
         let gender = document.createElement('p');
         let distance = document.createElement('p');
-
-        console.log(app.profilCard.profiles);
 
         let imgSrc = `${app.imgBaseURL}${app.profilCard.profiles[app.index].avatar}`
 
@@ -177,12 +173,12 @@ let app = {
             document.querySelector('.card').classList.add('hide');
             document.getElementById('fvourite').classList.add('hide');
             app.creatCard();
-        }, 500);
+        }, 700);
 
         document.querySelector('.fa-heart').classList.add('saveHeart');
         setTimeout(() => {
             document.querySelector('.fa-heart').classList.remove('saveHeart');
-        }, 1000);
+        }, 700);
 
         console.log(app.savedList);
     },
@@ -194,7 +190,7 @@ let app = {
             document.querySelector('.card').classList.add('hide');
             document.getElementById('dismiss').classList.add('hide');
             app.creatCard();
-        }, 500);
+        }, 700);
     }
 }
 
